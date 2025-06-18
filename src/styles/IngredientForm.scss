@@ -1,0 +1,23 @@
+@import "mixins.scss";
+
+.ingredient-form {
+  @include display-flex($direction: column);
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(226, 226, 226);
+
+  gap: 0.5rem;
+  width: 300px;
+  input,
+  textarea,
+  label {
+    width: 100%;
+  }
+  label {
+    font-size: 0.9rem;
+    color: rgb(104, 104, 104);
+    margin-bottom: -0.33rem;
+    padding-left: 0.33rem;
+  }
+}

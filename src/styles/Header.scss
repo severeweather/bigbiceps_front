@@ -1,0 +1,10 @@
+@import "mixins.scss";
+
+.navigation-bar {
+  @include display-flex($justify: space-between);
+
+  section {
+    @include display-flex;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,36 @@
+@import "Header.scss";
+@import "IngredientForm.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+#container {
+  margin: auto;
+  max-width: 95vw;
+}
+
+a {
+  color: rgb(151, 151, 151);
+  text-decoration: none;
+  :visited {
+    color: inherit;
+  }
+  &:hover {
+    color: rgb(83, 83, 83);
+  }
+}
+
+input,
+textarea {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 0.45rem;
+  &::placeholder {
+    color: rgb(193, 193, 193);
+  }
+}
