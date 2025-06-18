@@ -2,15 +2,14 @@ import { Link } from "react-router-dom";
 
 export function Header() {
   return (
-    <div>
-      <div classname="app-navigation-links">
-        <Link to="/">Home</Link>
+    <nav className="navigation-bar">
+      <section>
+        <Link to="/">Browse</Link>
         <Link to="/tracking">Tracking</Link>
-      </div>
-      <div classname="account-links">
-        <Link to="/login">Log in</Link>
-        <Link to="/register">Register</Link>
-      </div>
-    </div>
+      </section>
+      <section>
+        <Link to="/logout">Log out</Link>
+      </section>
+    </nav>
   );
 }
