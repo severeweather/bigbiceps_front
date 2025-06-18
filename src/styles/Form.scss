@@ -1,6 +1,6 @@
 @import "mixins.scss";
 
-.ingredient-form {
+.general-form {
   @include display-flex($direction: column);
   padding: 1rem;
   background-color: #f7f7f7;

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { getCookie } from "../utils/getCookie";
 
-export function IngredientForm() {
+export function Login() {
   useEffect(() => {
-    fetch("http://localhost:8000/food/new/ingredient", {
+    fetch("http://localhost:8000/auth/login/", {
       method: "GET",
       credentials: "include",
     })
@@ -16,11 +16,11 @@ export function IngredientForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
     const csrfToken = getCookie("csrftoken");
+    const formData = new FormData(e.target);
 
     try {
-      const res = await fetch("http://localhost:8000/food/new/ingredient", {
+      const res = await fetch("http://localhost:8000/auth/login/", {
         method: "POST",
         body: formData,
         headers: {
@@ -34,15 +34,21 @@ export function IngredientForm() {
       console.log("error:", err);
     }
   };
+
   return (
     <form className="general-form" method="post" onSubmit={handleSubmit}>
-      <label htmlFor="name">Name</label>
-      <input name="name" placeholder="Tomato.." required />
+      <label>Username</label>
+      <input name="username" type="text" placeholder="Username.." required />
 
-      <label htmlFor="description">Description</label>
-      <textarea name="description" placeholder="Red and round.." />
+      <label>Password</label>
+      <input
+        name="password"
+        type="password"
+        placeholder="Password.."
+        required
+      />
 
-      <button type="submit">Continue</button>
+      <button type="submit">Log in</button>
     </form>
   );
 }
