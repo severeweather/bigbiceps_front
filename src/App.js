@@ -9,6 +9,7 @@ import { FoodTracking } from "./pages/FoodTracking";
 import { Header } from "./components/Header";
 import { BrowseFood } from "./pages/BrowseFood";
 import { NewItem } from "./pages/NewItem";
+import { Login } from "./pages/Login";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/browse" element={<BrowseFood />} />
           <Route path="/tracking" element={<FoodTracking />} />
           <Route path="/new/*" element={<NewItem />} />
+          <Route path="/account/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
