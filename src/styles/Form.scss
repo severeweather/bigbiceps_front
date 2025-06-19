@@ -1,7 +1,7 @@
-@import "mixins.scss";
+@use "mixins.scss";
 
 .general-form {
-  @include display-flex($direction: column);
+  @include mixins.display-flex($direction: column);
   padding: 1rem;
   background-color: #f7f7f7;
   border-radius: 0.5rem;
