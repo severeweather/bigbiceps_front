@@ -1,5 +1,7 @@
-@use "Header.scss";
-@use "Form.scss";
+@use "Header";
+@use "Form";
+@use "colors";
+@use "ButtonsLinks";
 
 * {
   margin: 0;
@@ -14,20 +16,19 @@
 }
 
 a {
-  color: rgb(151, 151, 151);
+  color: colors.$action;
   text-decoration: none;
-  :visited {
-    color: inherit;
+  &:visited {
+    color: colors.$link-visited;
   }
   &:hover {
-    color: rgb(83, 83, 83);
+    color: colors.$action-hover;
   }
 }
 
 input,
 textarea {
   padding: 0.3rem 0.5rem;
-  font-size: 0.9rem;
   border: 1px solid rgb(226, 226, 226);
   border-radius: 0.45rem;
   &::placeholder {

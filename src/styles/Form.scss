@@ -1,4 +1,4 @@
-@use "mixins.scss";
+@use "mixins";
 
 .general-form {
   @include mixins.display-flex($direction: column);
@@ -19,5 +19,18 @@
     color: rgb(104, 104, 104);
     margin-bottom: -0.33rem;
     padding-left: 0.33rem;
+  }
+}
+
+.account-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  footer {
+    @include mixins.display-flex($justify: space-between);
+    gap: 1rem;
+    padding-top: 1rem;
   }
 }

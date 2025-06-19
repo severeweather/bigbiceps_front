@@ -1,0 +1,21 @@
+@use "colors";
+
+.action-button {
+  color: white;
+  font-size: 0.9rem;
+  background-color: colors.$action;
+  border: none;
+  border-radius: 10rem;
+  padding: 0.2rem 0.66rem;
+}
+
+a.nav-link {
+  color: colors.$nav-link;
+  text-decoration: none;
+  &:visited {
+    color: colors.$nav-link;
+  }
+  &:hover {
+    color: colors.$nav-link-hover;
+  }
+}
