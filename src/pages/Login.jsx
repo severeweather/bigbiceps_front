@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { getCookie } from "../utils/getCookie";
+import { Link } from "react-router-dom";
 
 export function Login() {
   useEffect(() => {
@@ -36,7 +37,12 @@ export function Login() {
   };
 
   return (
-    <form className="general-form" method="post" onSubmit={handleSubmit}>
+    <form
+      className="general-form account-form"
+      method="post"
+      onSubmit={handleSubmit}
+    >
+      <h3>Login</h3>
       <label>Username</label>
       <input name="username" type="text" placeholder="Username.." required />
 
@@ -47,8 +53,12 @@ export function Login() {
         placeholder="Password.."
         required
       />
-
-      <button type="submit">Log in</button>
+      <footer>
+        <Link to="/account/register">Register</Link>
+        <button type="submit" className="action-button">
+          Log in
+        </button>
+      </footer>
     </form>
   );
 }
