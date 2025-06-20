@@ -1,18 +1,11 @@
-import { useEffect } from "react";
 import { getCookie } from "../utils/getCookie";
 import { Link } from "react-router-dom";
+import { useRedirectAuthenticated } from "../hooks/useRedirectAuthenticated";
+import { useAuth } from "../hooks/useAuth";
 
 export function Login() {
-  useEffect(() => {
-    fetch("http://localhost:8000/auth/login/", {
-      method: "GET",
-      credentials: "include",
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error("GET failed");
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  const { refreshAuth } = useAuth();
+  useRedirectAuthenticated("/");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +24,8 @@ export function Login() {
       });
 
       if (!res.ok) throw new Error(res.status);
+
+      refreshAuth();
     } catch (err) {
       console.log("error:", err);
     }
