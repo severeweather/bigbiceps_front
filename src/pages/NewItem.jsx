@@ -1,7 +1,9 @@
 import { Link, Route, Routes } from "react-router-dom";
 import { IngredientForm } from "../components/IngredientForm";
+import { useRedirectUnauthenticated } from "../hooks/useRedirectUnauthenticated";
 
 export function NewItem() {
+  useRedirectUnauthenticated("/account/login/");
   return (
     <>
       <h2>new item</h2>

@@ -5,7 +5,7 @@ import { useAuth } from "../hooks/useAuth";
 
 export function Login() {
   const { refreshAuth } = useAuth();
-  useRedirectAuthenticated("/");
+  useRedirectAuthenticated();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +26,7 @@ export function Login() {
       if (!res.ok) throw new Error(res.status);
 
       refreshAuth();
+      console.log("logged in");
     } catch (err) {
       console.log("error:", err);
     }
