@@ -12,6 +12,7 @@ import { Login } from "./pages/Login";
 import { AuthContext } from "./AuthContext";
 import { useState, useEffect } from "react";
 import { Register } from "./pages/Register";
+import { Logout } from "./pages/Logout";
 
 function App() {
   const [auth, setAuth] = useState({
@@ -46,7 +47,7 @@ function App() {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ ...auth, refreshAuth }}>
+    <AuthContext.Provider value={{ auth, refreshAuth }}>
       <Router>
         <div id="container">
           <Header />
@@ -57,6 +58,7 @@ function App() {
             <Route path="/new/*" element={<NewItem />} />
             <Route path="/account/login" element={<Login />} />
             <Route path="/account/register" element={<Register />} />
+            <Route path="/account/logout" element={<Logout />} />
           </Routes>
         </div>
       </Router>

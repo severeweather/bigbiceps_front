@@ -23,14 +23,18 @@
 }
 
 .account-form {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  @include mixins.center-absolute($top: 40%);
   footer {
     @include mixins.display-flex($justify: space-between);
     gap: 1rem;
     padding-top: 1rem;
+  }
+}
+
+.new-item-form {
+  @include mixins.center-absolute($top: 40%);
+  textarea {
+    resize: vertical;
+    max-height: 300px;
   }
 }

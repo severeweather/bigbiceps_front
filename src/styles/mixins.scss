@@ -4,3 +4,10 @@
   justify-content: $justify;
   align-items: center;
 }
+
+@mixin center-absolute($top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+}

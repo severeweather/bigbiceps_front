@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../AuthContext";
+import { useAuth } from "../hooks/useAuth";
 
 export function Header() {
-  const auth = useContext(AuthContext);
+  const { auth } = useAuth();
 
   if (auth.loading) return null;
 
