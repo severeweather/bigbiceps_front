@@ -46,7 +46,7 @@ function App() {
     refreshAuth();
   }, []);
 
-  return (
+  return !auth.loading ? (
     <AuthContext.Provider value={{ auth, refreshAuth }}>
       <Router>
         <div id="container">
@@ -63,6 +63,8 @@ function App() {
         </div>
       </Router>
     </AuthContext.Provider>
+  ) : (
+    <>loading</>
   );
 }
 
