@@ -1,11 +1,12 @@
 @use "mixins";
+@use "colors";
 
 .general-form {
   @include mixins.display-flex($direction: column);
   padding: 1rem;
-  background-color: #f7f7f7;
+  background-color: colors.$section-grey;
   border-radius: 0.5rem;
-  border: 1px solid rgb(226, 226, 226);
+  border: 1px solid colors.$border;
 
   gap: 0.5rem;
   width: 300px;

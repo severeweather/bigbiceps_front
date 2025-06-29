@@ -1,0 +1,64 @@
+@use "mixins";
+@use "colors";
+
+.dish-comp-two-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  height: 60vh;
+}
+
+.rounded-grey-section {
+  display: block;
+  border: 1px solid colors.$border;
+  border-radius: 1rem;
+  background-color: colors.$section-grey;
+  padding: 1rem;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.search-section {
+  @include mixins.display-flex($direction: column);
+}
+
+.search-input-header {
+  position: sticky;
+  display: flex;
+  width: 50%;
+  gap: 1rem;
+  background: none;
+  input {
+    width: 100%;
+  }
+}
+
+.underlined-list {
+  padding: 1.5rem 0;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 40px,
+    black calc(100% - 40px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 40px,
+    black calc(100% - 40px),
+    transparent 100%
+  );
+  li {
+    @include mixins.display-flex($justify: space-between);
+    border-bottom: 1px solid colors.$border-lighter;
+    padding: 0.5rem 1rem;
+
+    color: colors.$normal-text;
+  }
+}
