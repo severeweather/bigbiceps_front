@@ -6,7 +6,12 @@
   background-color: colors.$action;
   border: none;
   border-radius: 10rem;
-  padding: 0.2rem 0.66rem;
+  padding: 0.4rem 1rem;
+}
+
+.naked-primary {
+  background: none;
+  color: colors.$action;
 }
 
 a.nav-link {
