@@ -60,10 +60,11 @@ export function NewItem() {
 
   return (
     <>
-      <h2>new item</h2>
-      <Link to="/new/ingredient">new ingredient</Link>
-      <Link to="/new/dish">new dish</Link>
-      <Link to="/new/meal">new meal</Link>
+      <nav className="menu-slider centered-vert">
+        <Link to="/new/ingredient">Ingredient</Link>
+        <Link to="/new/dish">Dish</Link>
+        <Link to="/new/meal">Meal</Link>
+      </nav>
 
       <Routes>
         <Route path=":type" element={<InitialForm onSuccess={changeStep} />} />
@@ -75,16 +76,6 @@ export function NewItem() {
         <Route path=":id/cuisines" element={<Cuisines item={item} onSuccess={changeStep} />} />
         {/* prettier-ignore */}
         <Route path=":id/composition" element={<Composition item={item} onSuccess={changeStep} />} />
-
-        {/* <Route path="ingredient" element={<IngredientForm onSuccess={changeStep} />} /> */}
-
-        {/* prettier-ignore */}
-        {/* <Route path="dish" element={<DishForm onSuccess={changeStep}/>} /> */}
-        {/* prettier-ignore */}
-
-        {/* prettier-ignore */}
-        {/* <Route path="meal" element={<MealForm onSuccess={changeStep} />} /> */}
-        {/* prettier-ignore */}
       </Routes>
     </>
   );

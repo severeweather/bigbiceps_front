@@ -56,7 +56,7 @@ export function Nutrients(props) {
       ) : (
         <form
           method="post"
-          className="general-form ingredient-nutrients-form"
+          className="general-form centered"
           onSubmit={handleSubmit}
         >
           {nutrients.map((item, key) => {
