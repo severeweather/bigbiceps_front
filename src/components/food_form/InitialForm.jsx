@@ -47,7 +47,7 @@ export function InitialForm(props) {
 
   return (
     <form
-      className="general-form new-item-form"
+      className="general-form centered"
       method="post"
       onSubmit={handleSubmit}
     >

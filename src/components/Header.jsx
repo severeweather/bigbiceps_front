@@ -15,6 +15,9 @@ export function Header() {
         <Link className="nav-link" to="/tracking">
           Tracking
         </Link>
+        <Link className="nav-link" to="/new">
+          New
+        </Link>
       </section>
       <section>
         {auth.isAuthenticated ? (

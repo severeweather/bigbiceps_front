@@ -51,7 +51,11 @@ export function Categories(props) {
   };
 
   return !loading ? (
-    <form className="general-form" method="post" onSubmit={handleSubmit}>
+    <form
+      className="general-form centered"
+      method="post"
+      onSubmit={handleSubmit}
+    >
       <h3>Categories</h3>
       {categories.map((item, key) => {
         return (

@@ -52,7 +52,11 @@ export function Cuisines(props) {
   }, [props.item.type, navigate]);
 
   return !loading ? (
-    <form method="post" className="general-form" onSubmit={handleSubmit}>
+    <form
+      method="post"
+      className="general-form centered"
+      onSubmit={handleSubmit}
+    >
       <h3>Cuisines</h3>
       {cuisines.map((item, key) => {
         return (

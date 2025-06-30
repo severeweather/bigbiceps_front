@@ -32,10 +32,24 @@
   }
 }
 
-.new-item-form {
-  @include mixins.center-absolute($top: 40%);
-  textarea {
-    resize: vertical;
-    max-height: 300px;
+.menu-slider {
+  @include mixins.display-flex();
+  padding: 1.5rem;
+  border-radius: 10rem;
+  gap: 2rem;
+  width: fit-content;
+  background-color: colors.$section-grey;
+  a {
+    color: colors.$nav-link;
+    &:visited {
+      color: colors.$nav-link;
+    }
+    &:hover {
+      color: colors.$nav-link-hover;
+    }
   }
+}
+
+.general-form.centered {
+  @include mixins.center-absolute($top: 40%);
 }
